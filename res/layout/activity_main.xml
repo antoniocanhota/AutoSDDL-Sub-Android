@@ -61,7 +61,7 @@
 	        android:textSize="12sp" />
     </LinearLayout>
     
-    <LinearLayout android:id="@+id/lyt_obd2"
+    <LinearLayout android:id="@+id/lyt_vehicle_alert"
     	android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -69,12 +69,12 @@
         android:orientation="horizontal"
         android:layout_below="@id/lyt_conn" >
         
-	    <TextView android:id="@+id/txt_obd2_lbl"
+	    <TextView android:id="@+id/txt_vehicle_alert_lbl"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:text="@string/obd2" />
+	        android:text="@string/vehicle_alert" />
 	    
-	    <TextView android:id="@+id/txt_obd2"
+	    <TextView android:id="@+id/txt_vehicle_alert"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="12sp" />
@@ -85,7 +85,7 @@
 	    	android:layout_centerHorizontal="true"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content" 
-        	android:layout_below="@id/lyt_obd2"
+        	android:layout_below="@id/lyt_vehicle_alert"
         	android:paddingBottom="12dp" >
 	    
 	    <Button android:id="@+id/btn_startservice"

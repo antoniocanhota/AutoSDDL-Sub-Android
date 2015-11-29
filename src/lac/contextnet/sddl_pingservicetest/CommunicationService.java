@@ -22,8 +22,8 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
 public class CommunicationService extends Service {	
-	public static final String VEHICLE_STATUS = "lac.contextnet.sddl_pingservicetest.broadcastmessage.ExtraPingMsg";
-	public static final String ACTION_SEND_VEHICLE_STATUS = "lac.contextnet.sddl_pingservicetest.broadcastmessage.ActionSendVehicleStatus";
+	public static final String VEHICLE_LICENSE_PLATE = "lac.contextnet.sddl_pingservicetest.broadcastmessage.VehicleLicensePlate";
+	public static final String ACTION_GET_VEHICLE_ALERT = "lac.contextnet.sddl_pingservicetest.broadcastmessage.ActionGetVehicleAlert";
 
 	private volatile Boolean keepRunning;
 	private volatile Boolean isConnected;
@@ -73,7 +73,7 @@ public class CommunicationService extends Service {
 	private void registerBroadcasts () {
 	
 		IntentFilter filter = new IntentFilter();
-		filter.addAction(ACTION_SEND_VEHICLE_STATUS);
+		filter.addAction(ACTION_GET_VEHICLE_ALERT);
 		broadcastManager.registerReceiver(mConnBroadcastReceiver, filter);
 	}
 	
@@ -149,8 +149,8 @@ public class CommunicationService extends Service {
 		public void onReceive(Context c, Intent i) {
 			
 			String action = i.getAction();
-			if (action.equals(ACTION_SEND_VEHICLE_STATUS)) {
-				Serializable s = i.getSerializableExtra(VEHICLE_STATUS);
+			if (action.equals(ACTION_GET_VEHICLE_ALERT)) {
+				Serializable s = i.getSerializableExtra(VEHICLE_LICENSE_PLATE);
 				
 				ApplicationMessage am = new ApplicationMessage();
 				am.setContentObject(s);
