@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AutoSDDL Pub</string>
+    
+    <!-- Static Elements -->
+    <string name="uuid">UUID:</string>
+    <string name="plate">License plate</string>
+    <string name="plate_hint">ABX-1234</string>    
+    <string name="conn">Server connection:</string>
+    <string name="obd2">OBD-2:</string>    
+    <string name="startservice">Start Service!</string>
+    <string name="stopservice">Stop Service!</string>    
+    
+    <!-- Dialog and Toast Messages -->
+	<string name="msg_d_connected">Conectado!</string>	
+	<string name="msg_d_disconnected">Desconectado!</string>	
+	<string name="msg_d_reconnected">Reconectado!</string>	
+
+</resources>
