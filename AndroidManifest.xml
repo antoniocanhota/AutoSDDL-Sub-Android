@@ -28,7 +28,7 @@
         </activity>
         
         <service android:enabled="true" android:name=".CommunicationService" />
-        <service android:enabled="true" android:name="br.pucrio.inf.acanhota.autosddl.pub.LocationService" />
+        <service android:enabled="true" android:name="br.pucrio.inf.acanhota.autosddl.sub.LocationService" />
     </application>
 
 </manifest>

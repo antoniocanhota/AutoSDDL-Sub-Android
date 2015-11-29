@@ -8,7 +8,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v4.content.LocalBroadcastManager;
 import android.widget.Toast;
-import br.pucrio.acanhota.autosddl.commons.VehicleMessage;
 
 public class MessageHandler extends Handler {
 	static final public String ACTION_UPDATE_CONNECTION_STATUS = "lac.contextnet.sddl_pingservicetest.broadcastmessage.ActionUpdateConnStatus";
@@ -42,13 +41,8 @@ public class MessageHandler extends Handler {
 			{
 				Serializable s = msg.getData().getSerializable("package");
 				
-				if(s instanceof VehicleMessage)
-				{
-					//Toast.makeText(context, ((VehicleMessage) s).toString(), Toast.LENGTH_LONG).show();
-				}
-				/* Here you can add different treatments to different types of 
-				 * received data if you decide not to do that on the 
-				 * NodeConnectionListener */
+				//broadcastConnectionStatus((String) s);
+				Toast.makeText(context, ((String) s), Toast.LENGTH_LONG).show();				
 			}
 			else
 				broadcastConnectionStatus(status);
